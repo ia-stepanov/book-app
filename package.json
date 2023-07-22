@@ -1,0 +1,27 @@
+{
+  "name": "book-app",
+  "version": "1.0.0",
+  "description": "Cool book app",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server",
+    "build": "rollup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ia-stepanov/book-app.git"
+  },
+  "keywords": [
+    "books"
+  ],
+  "author": "Igor Stepanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ia-stepanov/book-app/issues"
+  },
+  "homepage": "https://ia-stepanov.ru/",
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "rollup": "^3.26.3"
+  }
+}
