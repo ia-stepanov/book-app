@@ -6,6 +6,11 @@ class App {
   // Массив маршрутов
   routes = [{ path: '', view: MainView }];
 
+  // Глобальный State для работы с Favorites
+  appState = {
+    favorites: [],
+  };
+
   constructor() {
     // Подписываемся на событие изменения URL-адреса
     window.addEventListener('hashchange', this.route.bind(this));
@@ -24,7 +29,7 @@ class App {
     const view = this.routes.find((r) => r.path === location.hash).view;
 
     // Создаём экземпляр класса для отрисовки страницы
-    this.currentView = new view();
+    this.currentView = new view(this.appState);
 
     // Вызываем render, чтобы отрисовать страницу
     this.currentView.render();
