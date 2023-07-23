@@ -1,10 +1,14 @@
 // Импортируем компонент
 import { MainView } from './views/main/main';
+import { FavoritesView } from './views/favorites/favorites';
 
 // Основной класс приложения
 class App {
   // Массив маршрутов
-  routes = [{ path: '', view: MainView }];
+  routes = [
+    { path: '', view: MainView },
+    { path: '#favorites', view: FavoritesView },
+  ];
 
   // Глобальный State для работы с Favorites
   appState = {
