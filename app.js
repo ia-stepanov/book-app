@@ -4346,7 +4346,7 @@
     state = {
       bookInfo: [],
       bookInfoMore: [],
-      searchQuery: location.hash.split('/')[2],
+      searchQuery: location.hash.split('/')[1],
     };
 
     constructor(appState) {
