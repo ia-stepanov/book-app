@@ -27,7 +27,7 @@
   font-weight: 300;
   font-size: 11px;
   line-height: 15px;
-  margin-bottom: 3px;
+  margin-bottom: 4px;
 }
 
 .card__name {
@@ -35,6 +35,11 @@
   font-size: 15px;
   line-height: 110%;
   margin-bottom: 8px;
+}
+
+.card__link {
+  text-decoration: none;
+  color: var(--white);
 }
 
 .card__author {

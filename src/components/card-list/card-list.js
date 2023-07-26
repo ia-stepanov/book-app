@@ -20,6 +20,9 @@ export class CardList extends DivComponent {
     this.el.append(cardGrid);
 
     for (const card of this.parrentState.list) {
+      if (!card.cover_edition_key) {
+        continue;
+      }
       cardGrid.append(new Card(this.appState, card).render());
     }
 

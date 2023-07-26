@@ -1,4 +1,3 @@
-// import { Search } from '../../components/search/search.js';
 export class AbstractView {
   constructor() {
     this.app = document.getElementById('root');

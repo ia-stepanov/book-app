@@ -1,0 +1,9 @@
+.page-not-found {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.page-not-found a {
+  color: var(--black);
+}

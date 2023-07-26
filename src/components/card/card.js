@@ -31,13 +31,15 @@ export class Card extends DivComponent {
       </div>
       <div class="card__info">
         <div class="card__tag">
-          ${this.cardState.subject ? this.cardState.subject[0] : 'Не задано'}
+          ${this.cardState.subject ? this.cardState.subject[0] : ' '}
         </div>
         <div class="card__name">
-          ${this.cardState.title}
+          <a class="card__link" href="${this.cardState.key.replace(/works/g, '#books')}">
+            ${this.cardState.title}
+          </a>
         </div>
         <div class="card__author">
-          ${this.cardState.author_name ? this.cardState.author_name[0] : 'Не задано'}
+          ${this.cardState.author_name ? this.cardState.author_name[0] : ''}
         </div>
         <div class="card__footer">
           <button class="button__add ${existInFavorites ? 'button__active' : ''}">
