@@ -34,7 +34,7 @@ export class Card extends DivComponent {
           ${this.cardState.subject ? this.cardState.subject[0] : ' '}
         </div>
         <div class="card__name">
-          <a class="card__link" href="${this.cardState.key.replace(/works/g, '#books')}">
+          <a class="card__link" href="${this.cardState.key.replace(/works/g, '#book-app/#books')}">
             ${this.cardState.title}
           </a>
         </div>

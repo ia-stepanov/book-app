@@ -8,7 +8,8 @@ export class BookView extends AbstractView {
   state = {
     bookInfo: [],
     bookInfoMore: [],
-    searchQuery: location.hash.split('/')[1],
+    searchQuery: location.hash.split('/')[2],
+    // searchQuery: location.hash.split('/')[1], // gh-pages
   };
 
   constructor(appState) {
