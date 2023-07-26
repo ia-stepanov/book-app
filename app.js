@@ -1036,15 +1036,15 @@
       this.el.classList.add('header');
       this.el.innerHTML = `
       <div>
-        <img src="/static/logo.svg" alt="Логотип" /> 
+        <img src="static/logo.svg" alt="Логотип" /> 
       </div>
       <div class="menu">
         <a class="menu__item" href="#" /> 
-          <img src="/static/search.svg" alt="Поиск" /> 
+          <img src="static/search.svg" alt="Поиск" /> 
           Поиск книг
         </a>
         <a class="menu__item" href="#favorites" /> 
-          <img src="/static/favorites.svg" alt="Избранное" /> 
+          <img src="static/favorites.svg" alt="Избранное" /> 
           Избранное
           <div class="menu__counter">
             ${this.appState.favorites.length}
@@ -1077,9 +1077,9 @@
           class="search__input"
           value="${this.state.searchQuery ?? ''}"
         />
-        <img src="/static/search.svg" alt="Поиск" />
+        <img src="static/search.svg" alt="Поиск" />
       </div>
-      <button aria-label="искать"><img src="/static/search-white.svg" alt="Поиск" /></button>
+      <button aria-label="искать"><img src="static/search-white.svg" alt="Поиск" /></button>
     `;
       this.el.querySelector('button').addEventListener('click', this.search.bind(this));
       this.el.querySelector('input').addEventListener('keydown', (e) => {
@@ -1135,8 +1135,8 @@
           <button class="button__add ${existInFavorites ? 'button__active' : ''}">
             ${
               existInFavorites
-                ? '<img src="/static/favorites.svg" />'
-                : '<img src="/static/favorites-white.svg" />'
+                ? '<img src="static/favorites.svg" />'
+                : '<img src="static/favorites-white.svg" />'
             }
           </button>
         </div>
