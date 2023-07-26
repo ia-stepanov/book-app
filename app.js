@@ -1124,7 +1124,7 @@
           ${this.cardState.subject ? this.cardState.subject[0] : ' '}
         </div>
         <div class="card__name">
-          <a class="card__link" href="${this.cardState.key.replace(/works/g, '#books')}">
+          <a class="card__link" href="${this.cardState.key.replace(/works/g, 'book-app/#books')}">
             ${this.cardState.title}
           </a>
         </div>
@@ -4346,7 +4346,7 @@
     state = {
       bookInfo: [],
       bookInfoMore: [],
-      searchQuery: location.hash.split('/')[1],
+      searchQuery: location.hash.split('/')[2],
     };
 
     constructor(appState) {
@@ -4422,7 +4422,7 @@
     routes = [
       { path: '', view: MainView },
       { path: '#favorites', view: FavoritesView },
-      { path: '#books/:id', view: BookView },
+      { path: 'book-app/#books/:id', view: BookView },
     ];
 
     // Глобальный State для работы с Favorites
@@ -4458,14 +4458,14 @@
           const pathParts = location.hash.split('/');
 
           // Проверяем, что первая часть пути маршрута соответствует первой части URL-адреса
-          const routeIsValid = routeParts[0] === pathParts[0];
+          const routeIsValid = routeParts[1] === pathParts[1];
 
           // Проверяем, что вторая часть URL-адреса соответствует шаблону
           // (два символа алфавита и четыре цифры)
-          const pathIsValid = /^[A-Za-z]{2}\d{4}/.test(pathParts[1]);
+          const pathIsValid = /^[A-Za-z]{2}\d{4}/.test(pathParts[2]);
 
           // Проверяем, что URL-адрес не состоит более чем из двух частей
-          const pathIsNotTooLong = pathParts.length <= 2;
+          const pathIsNotTooLong = pathParts.length <= 3;
 
           // Если URL-адрес слишком длинный, выбрасываем исключение
           if (!pathIsNotTooLong) {
@@ -4473,7 +4473,7 @@
           }
 
           // Возвращаем результат, если путь маршрута и URL-адрес проходят проверку
-          return routeIsValid && (pathParts.length === 1 || pathIsValid);
+          return routeIsValid && (pathParts.length === 2 || pathIsValid);
         }).view;
 
         // Создаём экземпляр класса для отрисовки страницы
