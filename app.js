@@ -4398,6 +4398,7 @@
     }
 
     render() {
+      console.log(location.hash.split('/')[1]);
       const main = document.createElement('div');
       main.innerHTML = `
       <h1>Страница не найдена</h1>
