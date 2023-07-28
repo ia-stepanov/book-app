@@ -4313,7 +4313,7 @@
             ? typeof this.description === 'string'
               ? marked(this.description)
               : marked(this.description.value)
-            : 'Описание отсутвует'
+            : 'Описание отсутствует'
         }</p>
       </div>
       <div class="book__footer">
