@@ -69,7 +69,7 @@ Book App — это полноценное Single-Page Application (SPA) на J
 
 - [Макет BookApp](https://www.figma.com/file/atHxpoeIWwTwgO7qeIqplQ/BookApp)
 
-## Скриншот:
+## Скриншоты:
 
 <details><summary><b>Развернуть</b></summary>
 
